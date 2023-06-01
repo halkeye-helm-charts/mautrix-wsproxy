@@ -1,7 +1,7 @@
 apiVersion: v2
 type: application
 appVersion: latest
-version: 1.0.0
+version: 1.0.1
 name: mautrix-wsproxy
 description: A simple HTTP push -> websocket proxy for Matrix appservices
 keywords:
@@ -14,8 +14,7 @@ maintainers:
     email: helm@gavinmogan.com
 annotations:
   artifacthub.io/changes: |2
-     - "use tcp healthchecks ([fb7066b](https://github.com/halkeye-helm-charts/mautrix-wsproxy/commit/fb7066b04d971adda3d67e1076f3d08f4f4fb0e3))"
-     - "variable names ([30ec1a3](https://github.com/halkeye-helm-charts/mautrix-wsproxy/commit/30ec1a378ec70ad33021cebeb2784e7b8631ac16))"
+     - "add helmignore ([de568c7](https://github.com/halkeye-helm-charts/mautrix-wsproxy/commit/de568c71ff8389207aebbb1631bfb5efb271df93))"
   artifacthub.io/containsSecurityUpdates: 'false'
   artifacthub.io/images: |
     - name: wsproxy
