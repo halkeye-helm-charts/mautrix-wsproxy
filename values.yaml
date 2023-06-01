@@ -57,8 +57,8 @@ config:
   appservice_id: imessage
   as_token:
   hs_token:
-  sync_proxy_url:
-  sync_proxy_wsproxy_url:
+  sync_proxy_url: http://mautrix-syncproxy:29332
+  sync_proxy_wsproxy_url: http://mautrix-wsproxy:29331
   sync_proxy_shared_secret:
 
 ingress:
