@@ -61,22 +61,19 @@ spec:
               containerPort: 29331
               protocol: TCP
           livenessProbe:
-            httpGet:
-              path: /
-              port: http
+            tcpSocket:
+              port: 29331
             failureThreshold: {{ .Values.probes.liveness.failureThreshold }}
             periodSeconds: {{ .Values.probes.liveness.periodSeconds }}
           readinessProbe:
-            httpGet:
-              path: /
-              port: http
+            tcpSocket:
+              port: 29331
             failureThreshold: {{ .Values.probes.readiness.failureThreshold }}
             periodSeconds: {{ .Values.probes.readiness.periodSeconds }}
 {{- if semverCompare ">=1.16-0" .Capabilities.KubeVersion.GitVersion }}
           startupProbe:
-            httpGet:
-              path: /
-              port: http
+            tcpSocket:
+              port: 29331
             initialDelaySeconds: {{ .Values.probes.startup.initialDelaySeconds }}
             failureThreshold: {{ .Values.probes.startup.failureThreshold }}
             periodSeconds: {{ .Values.probes.startup.periodSeconds }}
